@@ -1,4 +1,3 @@
-using DefaultNameSpace;
 using System.Collections;
 using UnityEngine;
 
@@ -22,7 +21,7 @@ public class GunSystemController : MonoBehaviour
             StartCoroutine(EnableGun());
             foreach (Transform firePoint in _bulletPoints)
             {
-                PlayerStats.Instance.AddBullets();
+                //PlayerStats.Instance.AddBullets();
                 _bulletPool.Get(firePoint);
             }
 
