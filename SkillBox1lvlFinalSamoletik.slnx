@@ -1,3 +1,5 @@
 ﻿<Solution>
   <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="Elringus.UnityGoogleDrive.Runtime.csproj" />
+  <Project Path="Elringus.UnityGoogleDrive.Editor.csproj" />
 </Solution>

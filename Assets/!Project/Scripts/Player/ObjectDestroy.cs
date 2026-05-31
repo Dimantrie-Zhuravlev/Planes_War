@@ -1,3 +1,4 @@
+using DefaultNameSpace;
 using System.Collections;
 using UnityEngine;
 
@@ -49,6 +50,7 @@ public class ObjectDestroy : MonoBehaviour
     }
     private IEnumerator DestroyPlayer()
     {
+        PlayerStats.Instance.SaveDataToGoogleDrive();
         _playerController.OnDisable();
         yield return new WaitForSeconds(loseInterval);
         if (GameResults.Scores >= 300)
