@@ -9,6 +9,9 @@
 [Ss]priteEditorTemp/
 [Oo]sxData/
 
+# Project game Settings
+player_save.json
+
 # Cache
 [Cc]ache/
 
