@@ -49,7 +49,7 @@ public class ObjectDestroy : MonoBehaviour
     }
     private IEnumerator DestroyPlayer()
     {
-        //PlayerStats.Instance.SaveDataToGoogleDrive();
+        DefaultNameSpace.PlayerStats.Instance.SaveBullets();
         _playerController.OnDisable();
         yield return new WaitForSeconds(loseInterval);
         if (GameResults.Scores >= 300)

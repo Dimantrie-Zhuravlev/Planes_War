@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 
 public class GunSystemController : MonoBehaviour
@@ -19,9 +20,9 @@ public class GunSystemController : MonoBehaviour
         if (_canAttack)
         {
             StartCoroutine(EnableGun());
+            DefaultNameSpace.PlayerStats.Instance.AddBullet(_bulletPoints.Length);
             foreach (Transform firePoint in _bulletPoints)
             {
-                //PlayerStats.Instance.AddBullets();
                 _bulletPool.Get(firePoint);
             }
 

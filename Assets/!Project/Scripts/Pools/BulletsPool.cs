@@ -23,7 +23,7 @@ public class BulletsPool : MonoBehaviour
         var obj = _bullets?.FirstOrDefault(x => !x.activeSelf);
         if (obj == null)
         {
-            obj = Create(firePoint);
+            obj = CreateBullet(firePoint);
         }
         else
         {
@@ -40,7 +40,7 @@ public class BulletsPool : MonoBehaviour
         obj.SetActive(false);
     }
 
-    private GameObject Create(Transform firePoint)
+    private GameObject CreateBullet(Transform firePoint)
     {
         var obj = Instantiate(_bulletPrefab, firePoint.position, firePoint.rotation, transform);
         obj.GetComponent<BulletLifeTime>().EnableBulletLifecycle();
