@@ -39,12 +39,10 @@ namespace DefaultNameSpace
                 string json = File.ReadAllText(_saveFileName);
                 PlayerStatsData data = JsonUtility.FromJson<PlayerStatsData>(json);
                 _bullets = data.bulletsCount;
-                Debug.Log("Данные загружены! Пуль: " + _bullets);
             }
             else
             {
-                Debug.LogWarning("Файл сохранения не найден. Используются значения по умолчанию.");
-                _bullets = 0; // Начальное значение
+                _bullets = 0;
             }
         }
 
@@ -54,7 +52,6 @@ namespace DefaultNameSpace
             string json = JsonUtility.ToJson(data);
 
             File.WriteAllText(_saveFileName, json);
-            Debug.Log("Данные сохранены!");
         }
         private void OnDestroy()
         {
