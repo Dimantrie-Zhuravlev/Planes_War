@@ -53,3 +53,4 @@ Assets/UnityGoogleDrive
 *.vc.db
 
 /Logs/
+/UserSettings/
